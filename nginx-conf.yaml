@@ -1,0 +1,27 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nginx-global
+  namespace: default
+data: # or binaryData
+  APP_NAME: nginx
+  APP_OWNER: Jr
+  APP_DESCRIPTION: DESCRIPTION
+  DESCRIPTION: |
+    This app is for training purpose
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nginx-dev
+  namespace: default
+data:
+  ENV: dev
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nginx-prod
+  namespace: default
+data:
+  ENV: prod
